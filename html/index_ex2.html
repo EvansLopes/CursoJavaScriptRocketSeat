@@ -7,17 +7,15 @@
 <body>
     <script>
         function pares(x, y) {
+            var par = 0
             for (var i = x; i <= y; i++) {
-                var pares = i % 2
-                    var j = 0
-                    if(pares ==0){
-                        j++
-                    }
-                //console.log(pares)
-                 
+                if (i % 2 == 0){
+                    var par = par+1
+                }
+                
             }
-            console.log(j)
-            
+            console.log(par)
+
         }
 
         var resultado = pares(32, 321)            
