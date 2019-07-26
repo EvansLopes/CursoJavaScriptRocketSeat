@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiro exercício JavaScript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao" id="botao">Clique Aqui</button>
+        <div id="quadrados"></div>
+    </div>
+    <script>
+        var btnElement = document.getElementById('botao')
+        var qdrElement = document.getElementById('quadrados')
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newColor = getRandomColor(); // #E943F0
+
+        btnElement.onclick = function () {
+            var quadrados = document.createElement('div')
+
+            quadrados.style.width = 100
+            quadrados.style.height = 100
+            quadrados.style.backgroundColor = '#f00'
+
+           
+            qdrElement.onmouseover = function(){
+                quadrados.style.backgroundColor = getRandomColor()
+            }
+            qdrElement.appendChild(quadrados)
+        }
+
+    </script>
+</body>
+
+</html>
